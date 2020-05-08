@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+foreach $i (<*.java>) {
+  open(FIN,"<$i");
+  @list = <FIN>;
+  close(FIN);
+  open(FOUT,">$i");
+  foreach $line (@list) {
+    $line =~ s/ga3/ga4/g;
+    print FOUT $line;
+  }
+  close(FOUT);
+}

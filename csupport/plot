@@ -1,0 +1,14 @@
+#!/bin/csh
+if($# == 0) then
+  echo "usage: gaplot out-files"
+  exit 0
+endif
+set sim = $cwd:t
+foreach i ($*)
+  set base = $i:r
+  set ps = $sim-$base.ps
+  if(! -f $ps) then
+    setenv PGPLOT_DEV $ps/vps
+    vdisp -lw3 -nx2 -ny4 -p vec=chromo68_x0 $i
+  endif
+end
