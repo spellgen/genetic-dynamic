@@ -2,7 +2,7 @@
 
 Genetic algorithm simulation of stochastic dynamical systems
 
-This code was writting against JDK 1.0 - it was the first object oriented language I had access to and this project pretty much required OO.
+This code was written against JDK 1.0 - it was the first object oriented language I had access to and this project pretty much required OO.
 The java piece maintains a collection of (initially random) systems of stochastic differential equations that are evaluated for
 matching a target function defined over time.
 
